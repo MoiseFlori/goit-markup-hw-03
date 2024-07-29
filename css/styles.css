@@ -1,3 +1,4 @@
+/* Reseteaza marginile implicite */
 h1,
 h2,
 h3,
@@ -10,12 +11,36 @@ ul {
   margin-bottom: 0;
 }
 
+li{
+   list-style: none; /* Eliminarea punctelor de listă */
+}
+/* Setari de baza pentru body */
 body {
   font-family: "Roboto", sans-serif;
   color: #434455;
   background-color: #ffffff;
 }
 
+/* Stiluri pentru imagini */
+img {
+  display: block;
+}
+
+/* Stiluri pentru header */
+header.header {
+  border-bottom: 1px solid #e7e9fc;
+}
+
+/* Stiluri pentru container */
+.header-container.container {
+  display: flex;
+  width: 1158px;
+  margin: 0 auto;
+  padding: 0 15px;
+  justify-content: space-between; /* Pentru a alinia nav si address */
+}
+
+/* Stiluri pentru logo */
 a.logo {
   color: #4d5ae5;
   text-transform: uppercase;
@@ -25,6 +50,7 @@ a.logo {
   font-weight: 700;
   line-height: 1.17;
   letter-spacing: 0.03em;
+  margin-right: 76px;
 }
 a.logo .studio {
   color: #2e2f42;
@@ -35,7 +61,17 @@ a.logo .studio {
   line-height: 21px;
   letter-spacing: 0.03em;
 }
-.nav-list .nav-link {
+
+/* Stiluri pentru navigatie */
+.nav-bar {
+  display: flex;
+  align-items: center;
+}
+.nav-list {
+  display: flex;
+  gap: 40px;
+}
+.nav-item .nav-link {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
@@ -43,14 +79,20 @@ a.logo .studio {
   text-decoration: none;
   color: #2e2f42;
 }
-.nav-list .nav-link:hover,
-.nav-list .nav-link:focus {
+.nav-item .nav-link:hover,
+.nav-item .nav-link:focus {
   color: #404bbf;
 }
+
+/* Stiluri pentru address */
 .address-info {
   font-style: normal;
 }
-.address-link {
+.address-list {
+  display: flex;
+  gap: 40px;
+}
+.address-item .address-link {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -58,15 +100,17 @@ a.logo .studio {
   color: #434455;
   text-decoration: none;
 }
-.address-link:hover,
-.address-link:focus {
+.address-item .address-link:hover,
+.address-item .address-link:focus {
   color: #404bbf;
 }
+
 .first-section {
   color: #ffffff;
   background-color: #2e2f42;
   margin-top: 120px;
   margin-bottom: 120px;
+  padding: 188px 0;
 }
 
 .first-section-title {
@@ -75,9 +119,11 @@ a.logo .studio {
   line-height: 1.07;
   letter-spacing: 0.02em;
   text-align: center;
+  max-width: 496px;
 }
 
 .first-section .order-service-button {
+  display: block;
   font-family: "Roboto", sans-serif;
   background-color: #4d5ae5;
   font-weight: 500;
@@ -85,16 +131,57 @@ a.logo .studio {
   letter-spacing: 0.04em;
   color: #ffffff;
   cursor: pointer;
+  min-width: 169px;
+  height: 56px;
+  border-radius: 4px;
+  border: none;
 }
 .first-section .order-service-button:hover,
 .first-section .order-service-button:focus {
   background-color: #404bbf;
 }
+/* Stiluri pentru secțiunea a doua */
 .second-section {
-  margin-top: 120px;
-  margin-bottom: 120px;
+  padding: 120px 0;
 }
-.section-subtitle {
+
+/* Stiluri pentru clasa container */
+.container {
+  width: 1158px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Pattern pentru ascunderea titlului */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Stiluri pentru lista de caracteristici */
+.features-list {
+  display: flex;
+  gap: 24px;
+}
+/* Stiluri pentru fiecare element din listă */
+.feature-item {
+  flex-basis: calc((100% - 72px) / 4);
+}
+
+/* Eliminarea margin-right pentru ultimul element */
+.feature-item:last-child {
+  margin-right: 0;
+}
+
+/* Stiluri pentru titlul fiecărui element */
+.feature-title {
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -103,7 +190,8 @@ a.logo .studio {
   color: #2e2f42;
 }
 
-.section-p {
+/* Stiluri pentru descrierea fiecărui element */
+.feature-description {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -111,13 +199,15 @@ a.logo .studio {
   color: #434455;
 }
 
+/* Stiluri pentru secțiunea a treia */
 .third-section {
+  padding: 120px 0;
   background-color: #f4f4fd;
-  margin-top: 120px;
-  margin-bottom: 120px;
 }
 
+/* Stiluri pentru titlul secțiunii */
 .third-section-title {
+  margin-bottom: 72px;
   font-size: 36px;
   line-height: 1.11;
   text-align: center;
@@ -126,32 +216,141 @@ a.logo .studio {
   color: #2e2f42;
 }
 
-.third-section .first-item {
+/* Stiluri pentru lista echipei */
+.team-list {
+  display: flex;
+  gap: 24px;
+}
+
+/* Stiluri pentru elementele din lista echipei */
+.team-item {
+  width: calc((100% - 72px) / 4);
   background-color: #ffffff;
+  border-radius: 0px 0px 4px 4px;
 }
-.fourth-section {
-  margin-top: 120px;
-  margin-bottom: 120px;
+.team-item:last-child {
+  margin-right: 0;
 }
-.fourth-section .fourth-section-title {
+/* Stiluri pentru containerul intern din fiecare element al listei */
+.team-info {
+  padding: 32px 0;
+}
+
+/* Stiluri pentru numele membrului echipei */
+.team-name {
   text-align: center;
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  text-transform: capitalize;
+  margin-bottom: 8px;
+  font-size: 20px;
+  line-height: 1.2;
   color: #2e2f42;
 }
 
-.footer {
-  background-color: #2e2f42;
-}
-a.logo .studio-footer {
-  color: #f4f4fd;
-}
-.footer-p {
+/* Stiluri pentru rolul membrului echipei */
+.team-role {
+  text-align: center;
   font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #f4f4fd;
+  line-height: 24px;
+  color: #434455;
+}
+
+/* Stiluri pentru imaginea fiecarui membru al echipei */
+.third-section-img {
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+}
+/* Stiluri pentru sectiunea a patra */
+.fourth-section {
+  padding-top: 120px; /* Padding superior pentru sectiune */
+  padding-bottom: 120px; /* Padding inferior pentru sectiune */
+  background-color: #f4f4fd; 
+}
+
+/* Stiluri pentru titlul sectiunii a patra */
+.fourth-section-title {
+  margin-bottom: 72px; 
+  text-align: center; 
+  font-size: 36px; 
+  line-height: 1.11; 
+  letter-spacing: 0.02em; 
+  text-transform: capitalize; 
+  color: #2e2f42; 
+}
+
+/* Stiluri pentru lista portofoliului */
+.portfolio-list {
+  display: flex; /* Aranjare flexbox pentru a alinia elementele pe orizontala */
+  flex-wrap: wrap; /* Permite mutarea elementelor pe un rand nou daca nu au suficient spatiu */
+  column-gap: 24px; /* Spatiu orizontal intre elementele listei */
+  row-gap: 48px; /* Spatiu vertical intre elementele listei */
+ 
+
+}
+
+/* Stiluri pentru elementele din lista portofoliului */
+.portfolio-item {
+  width: calc((100% - 48px) / 3); /* Latimea elementului, calculata pentru a se potrivi 3 elemente cu spatiu intre ele */
+}
+
+/* Stiluri pentru containerul intern din fiecare element al listei */
+.portfolio-info {
+  padding: 32px 16px; 
+  border: 1px solid #e7e9fc; /* Bordura pentru container */
+  border-top: none; 
+  margin-bottom: 8px; 
+}
+
+/* Stiluri pentru numele aplicaiei */
+.portfolio-name {
+  text-align: center; 
+  margin-bottom: 8px; 
+  font-size: 20px; 
+  line-height: 1.2; 
+  color: #2e2f42; 
+}
+
+/* Stiluri pentru categoria aplicatiei */
+.portfolio-category {
+  text-align: center; 
+  font-size: 16px; 
+  line-height: 24px; 
+  color: #434455; 
+}
+
+/* Stiluri pentru imaginea fiecarei aplicatii */
+.portfolio-img {
+  width: 100%; /* Latimea imaginii sa fie 100% din container */
+  border-radius: 4px 4px 0 0; /* Rotunjirea colturilor de sus */
+}
+
+
+/* Stiluri pentru footer */
+.footer {
+  padding: 100px 0; 
+  background-color: #2e2f42; 
+}
+
+
+/* Stiluri pentru link-ul logo */
+a.logo {
+  display: inline-block; /* Proprietati de block pentru link */
+  margin-bottom: 16px; 
+  text-decoration: none; /* Elimina sublinierea implicita a link-ului */
+  font-size: 24px; 
+  font-weight: bold; 
+  color: #ffffff; 
+}
+
+/* Stiluri pentru partea 'Studio' din logo */
+a.logo .studio-footer {
+  color: #f4f4fd; 
+}
+
+/* Stiluri pentru paragraful din footer */
+.footer-p {
+  max-width: 264px; 
+  font-size: 16px;
+  font-weight: 400; 
+  line-height: 1.5; 
+  letter-spacing: 0.02em; 
+  color: #f4f4fd; 
 }
