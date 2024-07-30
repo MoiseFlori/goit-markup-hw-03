@@ -10,6 +10,9 @@ ul {
   margin-top: 0;
   margin-bottom: 0;
 }
+ ul {
+    list-style-type: none;
+}
 
 li {
   list-style: none; /* Eliminarea punctelor de listă */
@@ -172,7 +175,8 @@ a.logo .studio {
   display: flex;
   gap: 24px;
 }
-/* Stiluri pentru fiecare element din listă */
+
+/* Stiluri pentru fiecare element din lista */
 .feature-item {
    flex-basis: calc((100% - 72px) / 4);
 }
