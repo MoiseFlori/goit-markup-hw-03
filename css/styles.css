@@ -183,9 +183,9 @@ a.logo .studio {
 }
 
 /* Eliminarea margin-right pentru ultimul element */
-/*.feature-item:last-child {
+.feature-item:last-child {
   margin-right: 0;
-}*/
+}
 
 /* Stiluri pentru titlul fiecărui element */
 .feature-title {
@@ -237,9 +237,9 @@ a.logo .studio {
   border-radius: 0px 0px 4px 4px;
 }
 
-/*.team-item:last-child {
+.team-item:last-child {
   margin-right: 0;
-}*/
+}
 
 /* Stiluri pentru containerul intern din fiecare element al listei */
 .team-info {
