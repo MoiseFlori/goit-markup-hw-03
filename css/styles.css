@@ -12,11 +12,13 @@ li {
   margin-bottom: 0;
 }
 
-
-
-li,ul {
-  list-style: none; /* Eliminarea punctelor de listă */
+ul,li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
+
+
 
 /* Setari de baza pentru body */
 body {
