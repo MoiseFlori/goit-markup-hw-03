@@ -173,8 +173,8 @@ a.logo .studio {
   gap: 24px;
 }
 /* Stiluri pentru fiecare element din listă */
-.features-list .feature-item {
-   flex-basis: calc((100% - 72px) / 4)
+.feature-item {
+   flex-basis: calc((100% - 72px) / 4);
 }
 
 /* Eliminarea margin-right pentru ultimul element */
@@ -226,8 +226,8 @@ a.logo .studio {
 }
 
 /* Stiluri pentru elementele din lista echipei */
-.team-list .team-item {
-  flex-basis: calc((100% - 72px) / 4);
+.team-item {
+  flex-basis: calc((100% - 3 * 24px) / 4);
   background-color: #ffffff;
   border-radius: 0px 0px 4px 4px;
 }
@@ -288,7 +288,7 @@ a.logo .studio {
 }
 
 /* Stiluri pentru elementele din lista portofoliului */
-.portfolio-list .portfolio-item {
+.portfolio-item {
   width: calc((100% - 48px) / 3);
 }
 
